@@ -1,7 +1,8 @@
 async function getJoke(){
     try{
         //const url = "https://icanhazdadjoke.com/";
-        const url = "https://api.disneyapi.dev/character?name=Goofy";
+        const name = document.getElementById("Search").value;
+        const url = "https://api.disneyapi.dev/character?name=" + name;
         const headers = new Headers();
         headers.append("Accept", "application/json")
         const response = await fetch(url, {headers:headers})
